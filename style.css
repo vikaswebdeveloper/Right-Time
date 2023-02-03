@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(30, 68, 124);
+}
+
+#clock {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(clock.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: 1.5rem rgb(24, 52, 104);
+  border-radius: 100%;
+  box-shadow: 0px 5px 15px;
+}
+#clock:before {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 100%;
+  z-index: 100;
+}
+
+#hour,
+#minute,
+#second {
+  position: absolute;
+}
+
+#hour, #hour-hand{
+  width: 250px;
+  height: 250px;
+}
+
+#minute, #minute-hand{
+  width: 300px;
+  height: 300px;
+}
+
+#second, #second-hand{
+  width: 230px;
+  height: 230px;
+}
+
+#hour-hand:before {
+  content: "";
+  height: 9rem;
+  width: 0.5rem;
+  background-color: red;
+  position: absolute;
+  z-index: 10;
+  border-radius: 50px;
+}
+
+#minute-hand:before {
+  content: "";
+  height:12rem;
+  width: 0.5rem;
+  background-color: rgb(70, 223, 164);
+  position: absolute;
+  z-index: 10;
+  border-radius: 50px;
+}
+
+#second-hand:before {
+  content: "";
+  height: 10rem;
+  width: 0.2rem;
+  background-color: rgb(53, 177, 199);
+  position: absolute;
+  z-index: 10;
+  border-radius: 50px;
+}
+
+.hands {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  border-radius: 100%;
+}
